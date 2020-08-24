@@ -12,7 +12,7 @@ codding，是一种态度，用一个公开的途径展示我的学习之路。
 - 记录
   
   - 随想录
-    - [ 测试 ](https://mp.weixin.qq.com/s/7XGD-Z3wrThv5HyoK3B8AQ)
+    - [ 测试 ](https://www.baidu.com)
   
   - 生活记录
   
