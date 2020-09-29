@@ -22,6 +22,8 @@ codding，是一种态度，用一个公开的途径展示我的学习之路。
 
   - 教育心理学
   
+    - 语言与社交
+      - [ 语言与社交训练大纲 ](https://github.com/yiung/CoddingFamily/blob/19d85f988614a2ba5600447b99bd3c1364c3defa/doc/%E8%AF%AD%E8%A8%80%E4%B8%8E%E7%A4%BE%E4%BA%A4%E8%AE%AD%E7%BB%83%E5%A4%A7%E7%BA%B2.md)
     - 幼儿阶段（0-3岁）
     - 儿童阶段（3-6岁）
     - 少年阶段（6-12岁）
