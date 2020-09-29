@@ -23,7 +23,7 @@ codding，是一种态度，用一个公开的途径展示我的学习之路。
   - 教育心理学
   
     - 语言与社交
-      - [ 语言与社交训练大纲 ](https://github.com/yiung/CoddingFamily/blob/19d85f988614a2ba5600447b99bd3c1364c3defa/doc/语言与社交训练大纲.md)
+      - [ 语言与社交训练大纲 ](/doc/语言与社交训练大纲.md)
     - 幼儿阶段（0-3岁）
     - 儿童阶段（3-6岁）
     - 少年阶段（6-12岁）
@@ -115,5 +115,5 @@ codding，是一种态度，用一个公开的途径展示我的学习之路。
     
 # 赞赏码
 <p align="center">
-    <img src=".jpg" width="450px">
+    <img src="aaa.jpg" width="450px">
 </p>
