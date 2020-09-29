@@ -110,6 +110,4 @@ codding，是一种态度，用一个公开的途径展示我的学习之路。
     
     
 # 赞赏码
-<p align="center">
-    <img src="aaa.jpg" width="450px">
-</p>
+![赞赏码](/images/赞赏码.jpg)
