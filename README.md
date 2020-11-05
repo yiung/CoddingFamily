@@ -8,6 +8,9 @@ codding，是一种态度，用一个公开的途径展示我的学习之路。
 
 ### 目录(善用Ctrl+F)
 **注 : 没链接的是还没学习**
+
+  - 右脑
+    - [数字矩阵](http://47.103.72.111/api/memory/getDigitalMatrix?rowsNumber=20&columnsNumber=10) 2020-11-04
   
 - 心理学
 
