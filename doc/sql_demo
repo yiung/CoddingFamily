@@ -1,4 +1,6 @@
--- 根据实际
+-- 考虑一下数据库表的前缀是用ez还是e，其实用e比较简洁。
+-- 为了加快设计，暂时不思考任何索引设计 20201219
+-- 以下问题需要检查多次：默认为空或默认不为空，默认0/1等数字
 
 CREATE TABLE `e_account` (
   id bigint(20) unsigned NOT NULL COMMENT '账号ID，使用雪花算法保证机密',
@@ -12,27 +14,7 @@ CREATE TABLE `e_account` (
 )DEFAULT CHARSET=utf8 COMMENT='账号表'
 
 
-CREATE TABLE `t_account_configure` (
-  `account_id` bitint(20) NOT NULL AUTO_INCREMENT COMMENT 'ID',
-  `platform` varchar(30) DEFAULT NULL COMMENT '客服端',
-  `device_id` varchar(50) DEFAULT NULL COMMENT '设备ID',
-  `model` varchar(30) DEFAULT NULL COMMENT '手机型号',
-  `os_version` varchar(30) DEFAULT NULL COMMENT '操作系统版本',
-  `manufacturer` varchar(100) DEFAULT NULL COMMENT '厂商',
-  `version` varchar(20) DEFAULT NULL COMMENT '甲丁版本',
-  `default_role` varchar(32) DEFAULT NULL COMMENT '默认角色',
-  `default_role_name` varchar(20) DEFAULT NULL COMMENT '角色名',
-  `default_pro_code` varchar(10) DEFAULT NULL COMMENT '默认项目',
-  `gps_refresh_time` int(11) DEFAULT '30' COMMENT 'gps刷新间隔时间',
-  `beat_interval` int(11) DEFAULT '0' COMMENT '心跳间隔时间',
-  `clockin_count` int(2) DEFAULT '1' COMMENT '规定打卡次数',
-  `attend_config_id` bigint(20) DEFAULT NULL COMMENT '默认考勤组配置id',
-  `enable_check` tinyint(1) DEFAULT '1' COMMENT '默认用户是否打卡（1是/0不是）',
-  PRIMARY KEY (`account_id`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户默认配置'
-
-
-CREATE TABLE `ez_base_dictionary` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_base_dictionary` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='这个表在公司写了';
 CREATE TABLE `ez_system_config` (
 `id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE
 ) COMMENT='test';
@@ -42,8 +24,8 @@ CREATE TABLE `ez_system_api_config` (
 ) COMMENT='test';
 
 
-CREATE TABLE `ez_account` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
-CREATE TABLE `ez_user` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_account` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='这个表在公司写了';
+CREATE TABLE `ez_user` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='这个表在公司写了';
 
 CREATE TABLE `ez_base_authorization_role` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
 CREATE TABLE `ez_base_authorization_menu` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
@@ -56,12 +38,12 @@ type tinyint(2) unsigned NOT NULL COMMENT '公司类型',
 category tinyint(2) unsigned NOT NULL COMMENT '公司类别',
 code int(32) DEFAULT NULL COMMENT '公司编号',
 logo_url varchar(128) DEFAULT NULL COMMENT 'logo图标',
-name varchar(128) DEFAULT NULL COMMENT '公司名称',
+`name` varchar(128) DEFAULT NULL COMMENT '公司名称',
 abbreviation_name varchar(64) DEFAULT NULL COMMENT '简称',
 unified_social_credit_code varchar(64) DEFAULT NULL COMMENT '统一社会信用代码',
 registered_capital decimal(10,2) DEFAULT NULL COMMENT '注册资本金，万元',
 registered_address varchar(128) DEFAULT NULL COMMENT '注册地址',
-legal_representative` varchar(100) DEFAULT NULL COMMENT '法人代表',
+legal_representative varchar(100) DEFAULT NULL COMMENT '法人代表',
 deposit_bank varchar(128) DEFAULT NULL COMMENT '开户行',
 account_number varchar(128) DEFAULT NULL COMMENT '开户银行账号',
 phone char(11) DEFAULT NULL COMMENT '联系电话',
@@ -70,60 +52,100 @@ web_site varchar(128) DEFAULT NULL COMMENT '公司网址',
 email varchar(128) DEFAULT NULL COMMENT '公司邮箱',
 business_scope varchar(1024) DEFAULT NULL COMMENT '经营范围',
 operating_status tinyint(2) unsigned DEFAULT 1 COMMENT '营业状态：0- 1-存续',
-province` varchar(32) DEFAULT NULL COMMENT '省',
+province varchar(32) DEFAULT NULL COMMENT '省',
 city varchar(32) DEFAULT NULL COMMENT '城市',
 area varchar(32) DEFAULT NULL COMMENT '区县',
 industry tinyint(2) unsigned DEFAULT NULL COMMENT '行业',
 incorporation_date date DEFAULT NULL COMMENT '公司成立日期',
-state tinyint(2) unsigned DEFAULT 0 COMMENT '状态：0-禁用 1-启用 2-软删除',
+state tinyint(2) unsigned DEFAULT 1 COMMENT '状态：0-禁用 1-启用 2-软删除',
 gmt_create datetime NOT NULL COMMENT '创建时间',
 gmt_modified datetime NOT NULL COMMENT '更新时间',
-PRIMARY KEY (`id`) USING BTREE
+PRIMARY KEY (id) USING BTREE
 ) COMMENT='公司表';
 
 CREATE TABLE `ez_company_department` (
 id bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT 'id',
-company_id bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '绑定公司id',
-type tinyint(2) unsigned NOT NULL DEFAULT '0' COMMENT '类型：暂不使用',
-sort tinyint(2) unsigned NOT NULL DEFAULT '255' COMMENT '排序',
-name varchar(32) DEFAULT NULL COMMENT '部门名称',
+company_id bigint(20) unsigned NOT NULL COMMENT '绑定公司id',
+type tinyint(2) unsigned NOT NULL DEFAULT 0 COMMENT '类型：暂不使用',
+sort tinyint(2) unsigned NOT NULL DEFAULT 255 COMMENT '排序',
+`name` varchar(32) DEFAULT NULL COMMENT '部门名称',
 abbreviation_name varchar(32) DEFAULT NULL COMMENT '简称',
 parent_id bigint(20) unsigned DEFAULT NULL COMMENT '上级部门编号',
 dept_id_tier varchar(255) DEFAULT NULL COMMENT '部门层级关系（根节点开始）- 评估01',
 child_id_collection varchar(255) DEFAULT NULL COMMENT '子节点id集合- 评估02',
 level tinyint(2) unsigned DEFAULT NULL COMMENT '层级- 评估03',
-state tinyint(2) unsigned DEFAULT 0 COMMENT '状态：0-禁用 1-启用 2-删除',
+state tinyint(2) unsigned DEFAULT 1 COMMENT '状态：0-禁用 1-启用 2-删除',
 gmt_create datetime NOT NULL COMMENT '创建时间',
 gmt_modified datetime NOT NULL COMMENT '更新时间',
-PRIMARY KEY (`id`) USING BTREE
+PRIMARY KEY (id) USING BTREE
 ) COMMENT='部门表';
 
 
 CREATE TABLE `ez_authentication_company` (
-id bigint(20) unsigned NOT NULL COMMENT 'id',
-company_id bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '公司id',
-company_name bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '公司名称：冗余字段，任何公司合法重命名必须同时修改认证状态与公司名称',
+id bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT 'id',
+company_id bigint(20) unsigned NOT NULL  COMMENT '公司id',
+company_name bigint(20) unsigned NOT NULL COMMENT '公司名称：冗余字段，任何公司合法重命名必须同时修改认证状态与公司名称',
 state tinyint(2) unsigned DEFAULT 0 COMMENT '认证状态：0-未认证 1-已认证 2-认证已提交 3-认证被驳回',
 transactor_id bigint(20) unsigned NOT NULL COMMENT '经办人：注，其他表的经办人统一用此字段名',
 gmt_create datetime NOT NULL COMMENT '创建时间',
 gmt_modified datetime NOT NULL COMMENT '更新时间',
-PRIMARY KEY (`id`) USING BTREE
+PRIMARY KEY (id) USING BTREE
 ) COMMENT='认证-公司表';
 
 CREATE TABLE `ez_authentication_user` (
-`id` bigint(20) NOT NULL COMMENT 'id',
-user_id bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '用户id-绑定user表',
+id bigint(20) NOT NULL AUTO_INCREMENT COMMENT 'id',
+user_id bigint(20) unsigned NOT NULL  COMMENT '用户id-绑定user表',
 state tinyint(2) unsigned DEFAULT 0 COMMENT '认证状态：0-未认证 1-已认证 2-认证已提交 3-认证被驳回',
 transactor_id bigint(20) unsigned NOT NULL COMMENT '经办人：注，其他表的经办人统一用此字段名',
 gmt_create datetime NOT NULL COMMENT '创建时间',
 gmt_modified datetime NOT NULL COMMENT '更新时间',
-PRIMARY KEY (`id`) USING BTREE
+PRIMARY KEY (id) USING BTREE
 ) COMMENT='认证-用户表';
 
-CREATE TABLE `ez_company_employee` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
-CREATE TABLE `ez_record_third_party_authentication` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
-CREATE TABLE `ez_base_api_internal` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
-CREATE TABLE `ez_base_api_external` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_company_position` (
+id bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT 'id',
+`name` varchar(64) NOT NULL COMMENT '职位名称',
+company_id bigint(20) unsigned NOT NULL COMMENT '公司id',
+state tinyint(2) unsigned DEFAULT 1 COMMENT '状态：0-禁用 1-启用 2-删除',
+gmt_create datetime NOT NULL COMMENT '创建时间',
+gmt_modified datetime NOT NULL COMMENT '更新时间',
+PRIMARY KEY (id) USING BTREE
+) COMMENT='公司职位表';
+
+
+CREATE TABLE `ez_company_employee` (
+id bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT 'id',
+user_id bigint(20) unsigned NOT NULL COMMENT '用户id',
+company_id bigint(20) unsigned NOT NULL COMMENT '公司id',
+department_id bigint(20) unsigned DEFAULT NULL COMMENT '部门id',
+position_id bigint(20) unsigned NOT NULL COMMENT '职位id',
+state tinyint(2) unsigned DEFAULT 1 COMMENT '状态：0-离职 1-在职 2-留职（无权限）',
+gmt_create datetime NOT NULL COMMENT '创建时间',
+gmt_modified datetime NOT NULL COMMENT '更新时间',
+PRIMARY KEY (id) USING BTREE
+) COMMENT='公司职员表';
+
+CREATE TABLE `ez_record_third_party_authentication` (
+id bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT 'id',
+`name` varchar(64) DEFAULT NULL COMMENT '三方接口名称',
+url varchar(128) DEFAULT NULL COMMENT '三方接口地址',
+content varchar(256) DEFAULT NULL COMMENT '具体三方接口内容（包括异常信息）',
+type tinyint(2) unsigned DEFAULT 0 COMMENT '类型：查询字典表',
+gmt_create datetime NOT NULL COMMENT '创建时间',
+gmt_modified datetime NOT NULL COMMENT '更新时间',
+PRIMARY KEY (id) USING BTREE
+) COMMENT='第三方授权记录表';
+
+CREATE TABLE `ez_base_api_internal` (
+`id` bigint(20) unsigned NOT NULL COMMENT 'id',
+PRIMARY KEY (`id`) USING BTREE
+) COMMENT='test';
+
+CREATE TABLE `ez_base_api_external` (
+`id` bigint(20) unsigned NOT NULL COMMENT 'id',
+PRIMARY KEY (`id`) USING BTREE
+) COMMENT='test';
+
 CREATE TABLE `ez_system_log_api` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
 CREATE TABLE `ez_system_log_authority` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
 CREATE TABLE `ez_system_log_business` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
