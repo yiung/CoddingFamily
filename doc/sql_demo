@@ -1,7 +1,7 @@
 -- 根据实际
 
 CREATE TABLE `e_account` (
-  `id` bitint(20) NOT NULL COMMENT 'id，使用雪花算法',
+  `id` bitint(20) NOT NULL COMMENT '账号ID，使用雪花算法',
   `account` varchar(32) DEFAULT NULL COMMENT '账号',
   `password` varchar(64) DEFAULT NULL COMMENT '密码',
   `state` tinyint(2) NOT NULL COMMENT '启用状态 0:禁用,1:启用',
@@ -12,3 +12,66 @@ CREATE TABLE `e_account` (
 )DEFAULT CHARSET=utf8 COMMENT='账号表'
 
 
+CREATE TABLE `t_account_configure` (
+  `account_id` bitint(20) NOT NULL COMMENT '账号ID',
+  `platform` varchar(30) DEFAULT NULL COMMENT '客服端',
+  `device_id` varchar(50) DEFAULT NULL COMMENT '设备ID',
+  `model` varchar(30) DEFAULT NULL COMMENT '手机型号',
+  `os_version` varchar(30) DEFAULT NULL COMMENT '操作系统版本',
+  `manufacturer` varchar(100) DEFAULT NULL COMMENT '厂商',
+  `version` varchar(20) DEFAULT NULL COMMENT '甲丁版本',
+  `default_role` varchar(32) DEFAULT NULL COMMENT '默认角色',
+  `default_role_name` varchar(20) DEFAULT NULL COMMENT '角色名',
+  `default_pro_code` varchar(10) DEFAULT NULL COMMENT '默认项目',
+  `gps_refresh_time` int(11) DEFAULT '30' COMMENT 'gps刷新间隔时间',
+  `beat_interval` int(11) DEFAULT '0' COMMENT '心跳间隔时间',
+  `clockin_count` int(2) DEFAULT '1' COMMENT '规定打卡次数',
+  `attend_config_id` bigint(20) DEFAULT NULL COMMENT '默认考勤组配置id',
+  `enable_check` tinyint(1) DEFAULT '1' COMMENT '默认用户是否打卡（1是/0不是）',
+  PRIMARY KEY (`account_id`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户默认配置'
+
+
+CREATE TABLE `ez_base_dictionary` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_system_config` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_system_api_config` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_account` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_user` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_base_authorization_role` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_base_authorization_menu` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_base_authorization_authority` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_role_authority` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_company` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_company_department` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_authentication_company` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_authentication_user` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_company_employee` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_record_third_party_authentication` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_base_api_internal` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_base_api_external` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_system_log_api` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_system_log_authority` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_system_log_business` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_company_electronic_seal` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_contract` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_company_legal_person` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_contact` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_contract_appendix` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_user_config` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_task_box` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_certificate` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_sign_info` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_sign_process` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_notarization` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_sign_signatory` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_archive` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_archive_directory` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_user_signature` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_record_notarization_extract` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_record_notarization_extract` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_notice` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_order` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_order` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_system_message` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_system_log_login` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
+CREATE TABLE `ez_oauth_access_token` (`id` bigint(20) NOT NULL COMMENT 'id',PRIMARY KEY (`id`) USING BTREE) COMMENT='test';
