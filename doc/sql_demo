@@ -1,0 +1,14 @@
+-- 根据实际
+
+CREATE TABLE `e_account` (
+  `id` bitint(20) NOT NULL COMMENT 'id，使用雪花算法',
+  `account` varchar(32) DEFAULT NULL COMMENT '账号',
+  `password` varchar(64) DEFAULT NULL COMMENT '密码',
+  `state` tinyint(2) NOT NULL COMMENT '启用状态 0:禁用,1:启用',
+  `user_id` bitint(20) DEFAULT NULL COMMENT '用户ID',
+  `gmt_create` date NOT NULL COMMENT '创建时间',
+  `gmt_modified` date NOT NULL COMMENT '创建时间',
+  PRIMARY KEY (`id`) USING BTREE,
+)DEFAULT CHARSET=utf8 COMMENT='账号表'
+
+
