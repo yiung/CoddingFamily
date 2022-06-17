@@ -91,6 +91,7 @@ codding，是一种态度，用一个公开的途径展示我的学习之路。
     - 缓存击穿、雪崩、穿透问题与方案
     - 集群高可用、哨兵、持久化、LRU
     - 分布式锁、并发竞争、双写一致性
+    - [Pika - 一个持久化的大容量存储服务](https://github.com/OpenAtomFoundation/pika)
   
   - 框架
     - Jfinal源码分析
