@@ -120,9 +120,33 @@ codding，是一种态度，用一个公开的途径展示我的学习之路。
     - [腾讯 - tgideas](https://tgideas.qq.com)
     - [百度 - fex](http://fex.baidu.com)
     - [京东 - 凹凸实验室](https://aotu.io)
+    - 
   - github
     
-    
+百度：http://fex.baidu.com/
+http://efe.baidu.com/
+饿了么：https://fe.ele.me
+腾讯：http://www.alloyteam.com/
+美团：https://tech.meituan.com/
+滴滴：https://didi.github.io/
+蚂蚁金服：https://ant.design/
+淘宝：http://taobaofed.org/
+京东：https://aotu.io/
+奇虎360：https://75team.com/
+有赞技术：https://tech.youzan.com/
+字节跳动：https://techblog.toutiao.com/
+
+阿里巴巴：https://github.com/alibaba
+腾讯：https://github.com/AlloyTeam/
+百度fex-team：https://github.com/fex-team/
+饿了么：https://github.com/eleme
+大众点评：https://github.com/dianping
+美团点评：https://github.com/Meituan-Dianping
+滴滴出行: https://github.com/didi
+字节跳动：https://github.com/bytedance
+有赞：https://github.com/youzan
+京东凹凸实验室：https://github.com/o2team
+
 
 - 杂项
   - 考试
