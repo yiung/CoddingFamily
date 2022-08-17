@@ -153,7 +153,8 @@ codding，是一种态度，用一个公开的途径展示我的学习之路。
     - [中华人民共和国行政区划](https://github.com/modood/Administrative-divisions-of-China)
     - [中国运营商IP地址库](https://github.com/gaoyifan/china-operator-ip)
     - [中国爬虫违法违规案例汇总](https://github.com/HiddenStrawberry/Crawler_Illegal_Cases_In_China)
-    - 
+    - [中国独立开发者项目列表](https://github.com/1c7/chinese-independent-developer)
+    - [中国独立开发者项目列表（程序员版）](https://github.com/1c7/chinese-independent-developer/blob/master/README-Programmer-Edition.md)
     
     
 - 记录
