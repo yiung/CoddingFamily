@@ -25,6 +25,7 @@ codding，是一种态度，用一个公开的途径展示我的学习之路。
       - [科学上网 - 仅用于查阅学习资料](https://github.com/vpnforchina/vpnforchina.github.io)
       - [chat-censorship](https://github.com/citizenlab/chat-censorship)
       - [地址智能解析](https://github.com/ldwonday/zh-address-parse)
+      - [Chinese-Podcasts](https://github.com/alaskasquirrel/Chinese-Podcasts#%E9%87%8D%E5%BA%86)
       
   - 天文
     - [NASA天文](https://www.google.com/sky/) 2020-12-22
