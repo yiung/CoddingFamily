@@ -12,9 +12,14 @@ codding，是一种态度，用一个公开的途径展示我的学习之路。
   - 天文
     - [NASA天文](https://www.google.com/sky/) 2020-12-22
 
-  - 右脑
-    - [数字矩阵](http://47.103.72.111/api/memory/getDigitalMatrix?rowsNumber=20&columnsNumber=10) 2020-11-04
-  
+  - 右脑训练
+    - [记忆数字矩阵-200](http://api.yiung.com/api/memory/getDigitalMatrix?rowsNumber=20&columnsNumber=10) 2020-11-04
+    - [记忆数字矩阵-500](http://api.yiung.com/api/memory/getDigitalMatrix?rowsNumber=20&columnsNumber=25) 
+    - [记忆数字矩阵-1000](http://api.yiung.com/api/memory/getDigitalMatrix?rowsNumber=20&columnsNumber=50)
+    - [记忆数字矩阵-2000](http://api.yiung.com/api/memory/getDigitalMatrix?rowsNumber=20&columnsNumber=100)
+    - [记忆数字矩阵-5000](http://api.yiung.com/api/memory/getDigitalMatrix?rowsNumber=20&columnsNumber=250)
+    - [记忆数字矩阵-510000](http://api.yiung.com/api/memory/getDigitalMatrix?rowsNumber=20&columnsNumber=500)
+    
 - 心理学
 
   - 教育心理学
