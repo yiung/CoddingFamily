@@ -125,6 +125,7 @@ codding，是一种态度，用一个公开的途径展示我的学习之路。
     - [腾讯 - cdc-设计](https://cdc.tencent.com)
     - [腾讯 - isux](https://isux.tencent.com)
     - [腾讯 - tgideas](https://tgideas.qq.com)
+    - [腾讯 - TDesign](https://tdesign.tencent.com)
     - [百度 - fex](http://fex.baidu.com)
     - [京东 - 凹凸实验室](https://aotu.io)
     - [百度 - FEX](http://fex.baidu.com)
@@ -135,26 +136,19 @@ codding，是一种态度，用一个公开的途径展示我的学习之路。
     - [滴滴 - 滴滴](https://didi.github.io)
     - [阿里 - 蚂蚁金服](https://ant.design)
     - [阿里 - 淘宝](http://taobaofed.org)
+    - [360 - 360](https://75team.com)
+    - [有赞 - 有赞](https://tech.youzan.com)
+    - [字节跳动 - 头条](https://tech.youzan.com)
   - github
-
-京东：https://aotu.io/
-奇虎360：https://75team.com/
-有赞技术：https://tech.youzan.com/
-字节跳动：https://techblog.toutiao.com/
-
-阿里巴巴：https://github.com/alibaba
-腾讯：https://github.com/AlloyTeam/
-百度fex-team：https://github.com/fex-team/
-饿了么：https://github.com/eleme
-大众点评：https://github.com/dianping
-美团点评：https://github.com/Meituan-Dianping
-滴滴出行: https://github.com/didi
-字节跳动：https://github.com/bytedance
-有赞：https://github.com/youzan
-京东凹凸实验室：https://github.com/o2team
-
-TDesign: https://tdesign.tencent.com/
-
+    - [阿里巴巴](https://github.com/alibaba)
+    - [腾讯](https://github.com/AlloyTeam)
+    - [百度fex-team](https://github.com/fex-team)
+    - [饿了么](https://github.com/eleme)
+    - [大众点评](https://github.com/dianping)
+    - [滴滴](https://github.com/didi)
+    - [字节跳动](https://github.com/bytedance)
+    - [有赞](https://github.com/youzan)
+    - [京东凹凸实验室](https://github.com/o2team)
     
 - 记录
   - 随想录
