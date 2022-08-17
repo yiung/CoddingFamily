@@ -18,7 +18,7 @@ codding，是一种态度，用一个公开的途径展示我的学习之路。
     - [记忆数字矩阵-1000](http://api.yiung.com/api/memory/getDigitalMatrix?rowsNumber=20&columnsNumber=50)
     - [记忆数字矩阵-2000](http://api.yiung.com/api/memory/getDigitalMatrix?rowsNumber=20&columnsNumber=100)
     - [记忆数字矩阵-5000](http://api.yiung.com/api/memory/getDigitalMatrix?rowsNumber=20&columnsNumber=250)
-    - [记忆数字矩阵-510000](http://api.yiung.com/api/memory/getDigitalMatrix?rowsNumber=20&columnsNumber=500)
+    - [记忆数字矩阵-10000](http://api.yiung.com/api/memory/getDigitalMatrix?rowsNumber=20&columnsNumber=500)
     
 - 心理学
 
