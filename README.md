@@ -9,6 +9,20 @@ codding，是一种态度，用一个公开的途径展示我的学习之路。
 ### 目录(善用Ctrl+F)
 **注 : 没链接的是还没学习**
 
+  - 优秀资源汇总
+    - gethub
+      - [中华人民共和国行政区划](https://github.com/modood/Administrative-divisions-of-China)
+      - [2022年中国全国5级行政区划（省、市、县、镇、村）](https://github.com/adyliu/china_area)
+      - [中国运营商IP地址库](https://github.com/gaoyifan/china-operator-ip)
+      - [国家法律法规数据库](https://github.com/risshun/Chinese_Laws)
+      - [中国爬虫违法违规案例汇总](https://github.com/HiddenStrawberry/Crawler_Illegal_Cases_In_China)
+      - [中国独立开发者项目列表](https://github.com/1c7/chinese-independent-developer)
+      - [中国独立开发者项目列表（程序员版）](https://github.com/1c7/chinese-independent-developer/blob/master/README-Programmer-Edition.md)
+      - [CNBankCard 中国各大银行卡号查询](https://github.com/digglife/cnbankcard)
+      - [科学上网 - 仅用于查阅学习资料](https://github.com/vpnforchina/vpnforchina.github.io)
+      - [chat-censorship](https://github.com/citizenlab/chat-censorship)
+      - [地址智能解析](https://github.com/ldwonday/zh-address-parse)
+      - 
   - 天文
     - [NASA天文](https://www.google.com/sky/) 2020-12-22
 
@@ -150,19 +164,6 @@ codding，是一种态度，用一个公开的途径展示我的学习之路。
     - [有赞](https://github.com/youzan)
     - [京东凹凸实验室](https://github.com/o2team)
     - [华为](https://github.com/topics/huawei)
-    
-    - [中华人民共和国行政区划](https://github.com/modood/Administrative-divisions-of-China)
-    - [2022年中国全国5级行政区划（省、市、县、镇、村）](https://github.com/adyliu/china_area)
-    - [中国运营商IP地址库](https://github.com/gaoyifan/china-operator-ip)
-    - [国家法律法规数据库](https://github.com/risshun/Chinese_Laws)
-    - [中国爬虫违法违规案例汇总](https://github.com/HiddenStrawberry/Crawler_Illegal_Cases_In_China)
-    - [中国独立开发者项目列表](https://github.com/1c7/chinese-independent-developer)
-    - [中国独立开发者项目列表（程序员版）](https://github.com/1c7/chinese-independent-developer/blob/master/README-Programmer-Edition.md)
-    - [CNBankCard 中国各大银行卡号查询](https://github.com/digglife/cnbankcard)
-    - [科学上网 - 仅用于查阅学习资料](https://github.com/vpnforchina/vpnforchina.github.io)
-    - [chat-censorship](https://github.com/citizenlab/chat-censorship)
-    - [地址智能解析](https://github.com/ldwonday/zh-address-parse)
-    
     
 - 记录
   - 随想录
