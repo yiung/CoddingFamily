@@ -149,6 +149,7 @@ codding，是一种态度，用一个公开的途径展示我的学习之路。
     - [字节跳动](https://github.com/bytedance)
     - [有赞](https://github.com/youzan)
     - [京东凹凸实验室](https://github.com/o2team)
+    - [华为](https://github.com/topics/huawei)
     
     - [中华人民共和国行政区划](https://github.com/modood/Administrative-divisions-of-China)
     - [中国运营商IP地址库](https://github.com/gaoyifan/china-operator-ip)
