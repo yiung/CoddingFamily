@@ -127,17 +127,16 @@ codding，是一种态度，用一个公开的途径展示我的学习之路。
     - [腾讯 - tgideas](https://tgideas.qq.com)
     - [百度 - fex](http://fex.baidu.com)
     - [京东 - 凹凸实验室](https://aotu.io)
-    - 
+    - [百度 - FEX](http://fex.baidu.com)
+    - [百度 - EFE](http://efe.baidu.com)
+    - [饿了么 - FE](https://fe.ele.me)
+    - [腾讯 - 腾讯](http://www.alloyteam.com)
+    - [美团 - 美团](https://tech.meituan.com)
+    - [滴滴 - 滴滴](https://didi.github.io)
+    - [阿里 - 蚂蚁金服](https://ant.design)
+    - [阿里 - 淘宝](http://taobaofed.org)
   - github
-    
-百度：http://fex.baidu.com/
-http://efe.baidu.com/
-饿了么：https://fe.ele.me
-腾讯：http://www.alloyteam.com/
-美团：https://tech.meituan.com/
-滴滴：https://didi.github.io/
-蚂蚁金服：https://ant.design/
-淘宝：http://taobaofed.org/
+
 京东：https://aotu.io/
 奇虎360：https://75team.com/
 有赞技术：https://tech.youzan.com/
@@ -156,11 +155,6 @@ http://efe.baidu.com/
 
 TDesign: https://tdesign.tencent.com/
 
-
-- 杂项
-  - 考试
-    - 马克思主义基本原理概论
-    - 中国近代史纲要
     
 - 记录
   - 随想录
