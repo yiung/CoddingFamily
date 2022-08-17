@@ -17,6 +17,7 @@ codding，是一种态度，用一个公开的途径展示我的学习之路。
       - [中国运营商IP地址库](https://github.com/gaoyifan/china-operator-ip)
       - [中国城市县区的经纬度数据](https://github.com/88250/city-geo)
       - [国家法律法规数据库](https://github.com/risshun/Chinese_Laws)
+      - [中华人民共和国法律文库](https://github.com/ImCa0/just-laws)
       - [中国爬虫违法违规案例汇总](https://github.com/HiddenStrawberry/Crawler_Illegal_Cases_In_China)
       - [中国独立开发者项目列表](https://github.com/1c7/chinese-independent-developer)
       - [中国独立开发者项目列表（程序员版）](https://github.com/1c7/chinese-independent-developer/blob/master/README-Programmer-Edition.md)
