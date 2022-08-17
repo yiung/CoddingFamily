@@ -11,7 +11,7 @@ codding，是一种态度，用一个公开的途径展示我的学习之路。
 
   - 优秀资源汇总
     - gethub
-      - [中国人主导/国产编程语言列表]()
+      - [中国人主导/国产编程语言列表](/doc/中国人主导-国产编程语言列表.md)
       - [中华人民共和国行政区划](https://github.com/modood/Administrative-divisions-of-China)
       - [2022年中国全国5级行政区划（省、市、县、镇、村）](https://github.com/adyliu/china_area)
       - [中国运营商IP地址库](https://github.com/gaoyifan/china-operator-ip)
